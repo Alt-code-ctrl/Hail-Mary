@@ -506,8 +506,8 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("M1" = "ncr_old")
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_DOWN_BULLET_T1) // The NCR is more tanky, but slower
+	armor = ARMOR_VALUE_LIGHT //only GIVE armor value_medium if above corporal, doebeit the sergeant uses the trooper helmet.
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1) // The NCR is more tanky, but slower
 
 /obj/item/clothing/head/f13/ncr/Initialize()
 	. = ..()	
@@ -551,7 +551,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/f13/ncr/steelpot_goggles/trenchraider
 	name = "NCR trench storm helmet"
 	desc = "A standard issue NCR steel helmet, issued with extra steel for close quarters fighting."
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_UP_DT_T1) // The NCR is more tanky, but slower
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_UP_DT_T1) // The NCR is more tanky, but slower
 
 
 /obj/item/clothing/head/f13/ncr/steelpot_med
@@ -606,7 +606,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "ncrarmyhelmetheavy"
 	item_state = "ncrarmyhelmetheavy"
 	flags_cover = HEADCOVERSEYES|HEADCOVERSMOUTH
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T3)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
 /obj/item/clothing/head/f13/ncr/standard/conscript
@@ -702,8 +702,8 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "scoutberet"
 	item_state = "scoutberet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_DOWN_BULLET_T1)
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_DOWN_BULLET_T2)
 
 /obj/item/clothing/head/f13/trailranger
 	name = "NCR trail ranger hat"
@@ -711,14 +711,15 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_DOWN_BULLET_T1)
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_DOWN_BULLET_T2)
 
 /obj/item/clothing/head/f13/ranger
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "rangerhat"
 	item_state = "rangerhat"
+	armor = ARMOR_VALUE_MEDIUM
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2, ARMOR_MODIFIER_UP_BULLET_T1)
 
